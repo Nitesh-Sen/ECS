@@ -68,8 +68,10 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 	CMD ["-D", "FOREGROUND"]
 ```
 
-
 &nbsp; &nbsp; &nbsp;  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/93bb453df7baeefc053fa4a539c007d2b7f39ccb/Images/Image19-18-39_2023-04-13.png">
+> ***Dockerfile is ready to build now*** 
+<br />
+
 
  #### Build the Docker Image.
  -	Go to in Docker directory. ``$ cd ~/Docker``
@@ -89,6 +91,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 
 <br />
 
+
 #### Push the Image *Apache2* to Elastic Container Registry
 - Firstly Validate the User's Credentials with AWS CLI. ``$ aws sts get-caller-identity``
   <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/d851eee7c35e2916f474f1e2601e16890f71ab97/Images/Image20-42-40_2023-04-13.png">
@@ -100,7 +103,12 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 - Now run these following commands in your local server. which is showing in ECR.
 ```
 $ aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin XXXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com
+$ docker tag app:apache2 XXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/app:apache2
 $ docker push XXXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/app:apache2
 ```  
 	
  &nbsp; &nbsp;  &nbsp;  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/1a7c2ca2841b73d56d1657b8dd246bcce3590f3f/Images/Image22-41-35_2023-04-13.png"> <br /> 
+&nbsp; &nbsp;  &nbsp;  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/eeb4a4cd550a07abc5076cfefc4dbc16769fa505/Images/Image22-46-09_2023-04-13.png">
+- Now my docker image pushed on the Amazon ECR. Let's check in the console.
+ &nbsp; &nbsp;  &nbsp;  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/b500ff97cf2927c5d1f652e5531cf2f4631d4d58/Images/Image22-54-47_2023-04-13.png"> <br /> 
+> ***Docker image is pushed successfully*** <br />
