@@ -111,4 +111,4 @@ $ docker push XXXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/app:apache2
 &nbsp; &nbsp;  &nbsp;  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/eeb4a4cd550a07abc5076cfefc4dbc16769fa505/Images/Image22-46-09_2023-04-13.png">
 - Now my docker image pushed on the Amazon ECR. Let's check in the console.
  &nbsp; &nbsp;  &nbsp;  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/b500ff97cf2927c5d1f652e5531cf2f4631d4d58/Images/Image22-54-47_2023-04-13.png"> <br /> 
-> ***Docker image is pushed successfully*** <br />
+> ***Docker image is pushed successfully. Now You can use this in your Amazon ECS Service*** <br />
