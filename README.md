@@ -13,6 +13,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 - Build a **Docker Image**  of **Apache container** and configure web page, add this data ``Hello From ECS`` in web page. Then, Pull that **Docker Image** to Amazon ECR.
 	- [Create a **Dockerfile**](#create-an-dockerfile)
 	- [Build the **Image**](#build-the-docker-image)   
+	- [Pull the **Docker Image** on ECR Repository](#)
 -   Create a **Cluster** in Amazon Elastic Container Service (ECS). And in the **Task Defination** define that docker image. And run that task with that Docker Image.  
 -   Finally, search the DNS in your Browser and check your web page show this -> ``Hello From ECS``
 
@@ -44,6 +45,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 	   <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/2023-04-13_14-38.png">
 - Now, private ECR repository is created. <br />
 	  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/2023-04-13_14-40.png">
+<br />
 
  ### Create And Build the image. Then push that image to ECR Repository
  #### Create an Dockerfile.
@@ -82,4 +84,15 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 >  Now go on browser and search ``localhost:8080`` <br />  
 >  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/c531e59ac28bf252890f1ab25c68e257aa31141e/Images/Image20-14-41_2023-04-13.png"> 
 >	
->   ***Yeah, it's working.....!***
+>   ***Yeah, it's working.....!*** 
+
+<br />
+
+#### Push the Image *(Apache2)* to Elastic Container Registry (ECR)
+- Firstly Validate the User's Credentials with AWS CLI. ``$ aws sts get-caller-identity``
+  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/d851eee7c35e2916f474f1e2601e16890f71ab97/Images/Image20-42-40_2023-04-13.png">
+ -  Now you sign in your Amazon console and go in [ECR Service](https://us-west-1.console.aws.amazon.com/ecr/get-started?region=us-west-1).
+ - Click on your repsitory. <br /> 
+ &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/Image20-57-35_2023-04-13.png">
+ - Click on push command in repository. <br /> 
+&nbsp;  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/Image20-51-31_2023-04-13.png"> <br /> 
