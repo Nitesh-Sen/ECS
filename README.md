@@ -7,7 +7,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
  - It’s secure as it transfers container images over HTTPS and automatically encrypts your images at rest.
  - Running registries close to the systems running the containers cuts deployment latency and reduces exposure to network outages.
 
-## Task:- 
+# Task:- 
 > [Create the Private Amazon ECR Repository](#creating-an-ecr-repository). 
 >
 > Build a **Docker Image**  of **Apache container** and configure web page, add this data ``Hello From ECS`` in web page. Then, Pull that **Docker Image** to Amazon ECR.
