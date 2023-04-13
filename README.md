@@ -47,19 +47,18 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
  - Run this command to create a directory  and go in that directory. ``$ mkdir ~/Docker && cd ~/Docker``
 - Create a file with name **Dockerfile** and add this data. 
 ```
-		FROM ubuntu:22.04
+	FROM ubuntu:22.04
 
-		RUN apt update && apt install -y apache2
+	RUN apt update && apt install -y apache2
 
-		ENV APACHE_RUN_USER www-data
-		ENV APACHE_RUN_GROUP www-data
-		ENV APACHE_LOG_DIR /var/log/apache2
-		ENV APACHE_RUN_DIR /var/www/html
+	ENV APACHE_RUN_USER www-data
+	ENV APACHE_RUN_GROUP www-data
+	ENV APACHE_LOG_DIR /var/log/apache2
+	ENV APACHE_RUN_DIR /var/www/html
 
-		RUN echo "<font size = "20" color="green"><b><u>Hello From ECS ;)</u></b></font><br />" > /var/www/html/index.html
+	RUN echo "<font size = "20" color="green"><b><u>Hello From ECS ;)</u></b></font><br />" > /var/www/html/index.html
 
-		ENTRYPOINT ["/usr/sbin/apache2"]
-		CMD ["-D", "FOREGROUND"]
+	ENTRYPOINT ["/usr/sbin/apache2"]
+	CMD ["-D", "FOREGROUND"]
 ```
-Imagelink
 
