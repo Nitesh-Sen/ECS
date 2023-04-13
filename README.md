@@ -14,7 +14,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 - Build a **Docker Image**  of **Apache container** and configure web page, add this data ``Hello From ECS`` in web page. Then, Pull that **Docker Image** to Amazon ECR.
 	- [Create a **Dockerfile**](#create-an-dockerfile)
 	- [Build the **Image**](#build-the-docker-image)   
-	- [Pull the **Docker Image** on ECR Repository](#Push-the-Image-*Apache2*-to-Elastic-Container-Registry)
+	- [Pull the **Docker Image** on ECR Repository](#push-the-image-apache2-to-elastic-container-registry)
 -   Create a **Cluster** in Amazon Elastic Container Service (ECS). And in the **Task Defination** define that docker image. And run that task with that Docker Image.  
 -   Finally, search the DNS in your Browser and check your web page show this -> ``Hello From ECS``
 
