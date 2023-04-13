@@ -11,8 +11,8 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 # Task:- 
 - [Create the Private Amazon ECR Repository](#creating-an-ecr-repository). 
 - Build a **Docker Image**  of **Apache container** and configure web page, add this data ``Hello From ECS`` in web page. Then, Pull that **Docker Image** to Amazon ECR.
-	- [Create a **Dockerfile**](create-an-dockerfile)
-	- Build the image    
+	- [Create a **Dockerfile**](#create-an-dockerfile)
+	- [Build the **Image**](#build-the-docker-image)   
 -   Create a **Cluster** in Amazon Elastic Container Service (ECS). And in the **Task Defination** define that docker image. And run that task with that Docker Image.  
 -   Finally, search the DNS in your Browser and check your web page show this -> ``Hello From ECS``
 
@@ -61,12 +61,16 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 	ENTRYPOINT ["/usr/sbin/apache2"]
 	CMD ["-D", "FOREGROUND"]
 ```
- &nbsp; &nbsp; &nbsp; &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/93bb453df7baeefc053fa4a539c007d2b7f39ccb/Images/Image19-18-39_2023-04-13.png">
+
+
+&nbsp; &nbsp; &nbsp;  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/93bb453df7baeefc053fa4a539c007d2b7f39ccb/Images/Image19-18-39_2023-04-13.png">
 
  #### Build the Docker Image.
  -	Go to in Docker directory. ``$ cd ~/Docker``
  -	Now run command to build the docker image. ``$ docker build -t <your_ECR-Repository_name>:apache2 .``
  	<img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/0cf70009f70c2836416f626d1275908618d4d43e/Images/Image19-45-49_2023-04-13.png">
+
+	
 > **Run a container with use that image for testing. Is that working or not?**
 > 
 > Run command to check the **Image Id** ``$ docker images``.
