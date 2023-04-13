@@ -62,3 +62,17 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 	CMD ["-D", "FOREGROUND"]
 ```
  &nbsp; &nbsp; &nbsp; &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/93bb453df7baeefc053fa4a539c007d2b7f39ccb/Images/Image19-18-39_2023-04-13.png">
+
+ #### Build the Docker Image.
+ -	Go to in Docker directory. ``$ cd ~/Docker``
+ -	Now run command to build the docker image. ``$ docker build -t <your_ECR-Repository_name>:apache2 .``
+ 	<img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/0cf70009f70c2836416f626d1275908618d4d43e/Images/Image19-45-49_2023-04-13.png">
+> **Run a container with use that image for testing. Is that working or not?**
+> 
+> Run command to check the **Image Id** ``$ docker images``.
+> Then copy the Image id and run the container with use that image.  ``$ docker run -d -p 8080:80 <Image-Id>`` <br />  
+> <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/2eba6ec22ab93a6b1915d8675efbc71d0c2a46cb/Images/Image19-59-53_2023-04-13.png"> <br />  
+>  Now go on browser and search ``localhost:8080`` <br />  
+>  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/c531e59ac28bf252890f1ab25c68e257aa31141e/Images/Image20-14-41_2023-04-13.png"> 
+>	
+>   ***Yeah, it's working.....!***
