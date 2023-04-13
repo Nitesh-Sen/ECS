@@ -27,7 +27,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 -   [AWS Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)  with permissions to interact with ECR.
 -   [Docker installation in localy for Ubuntu OS](https://docs.docker.com/engine/install/ubuntu/). 
 	 Docker installing for other operating system, click [here](https://docs.docker.com/get-docker/).
--   The  [AWS CLI installed locally](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html/). And configure the credentials.
+-   The  [AWS CLI installed locally](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). And configure the credentials.
 
 #### Creating an ECR Repository
 - Sign in your [Amazon console](https://aws.amazon.com/console/).
