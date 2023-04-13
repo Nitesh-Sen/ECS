@@ -97,3 +97,10 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/Image20-57-35_2023-04-13.png">
  - Click on push command in repository. <br /> 
 &nbsp;  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/Image20-51-31_2023-04-13.png"> <br /> 
+- Now run these following commands in your local server. which is showing in ECR.
+```
+$ aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin XXXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com
+$ docker push XXXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com/app:apache2
+```  
+	
+ &nbsp; &nbsp;  &nbsp;  &nbsp; <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/1a7c2ca2841b73d56d1657b8dd246bcce3590f3f/Images/Image22-41-35_2023-04-13.png"> <br /> 
