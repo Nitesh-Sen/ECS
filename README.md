@@ -1,3 +1,4 @@
+
 ## What is Amazon Elastic Container Registry (ECR)?
 Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service. Amazon ECR is a secure and reliable AWS service. Just like any other cloud computing service, we can scale it up or scale it down based on our requirements. Amazon ECR uses AWS Identity and Access Management (IAM) to enable resource-based permissions for private Docker repositories. Through the Docker command line interface (CLI) we can push, pull, and manage images.
 
@@ -32,7 +33,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 	  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/2023-04-13_14-25.png"> <br /> 
 - Choose your Repository type ``Private`` and give name ``app``. <br />
 	  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/2023-04-13_15-00.png"> <br />
-- Select a visibility, name the repository, and select any of the other options you need:
+- Select any of the other options you need **Optional**:
 
 	-   _Tag immutability_  which prevents the same tag from being pushed twice and overwriting a previous version of the tag.
 	-   _Scan on push_  which ensures that images will be scanned for security vulnerabilities each time a new tag is pushed.
@@ -45,4 +46,4 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
  ### Build the image and pushing that image to ECR Repository
  #### Create an Dockerfile.
  > Run this command to create a directory  and go in that directory. ``$ mkdir ~/Docker && cd ~/Docker``
- > create a file with name **Dockerfile** and add this data. ``
+ > create a file with name **Dockerfile** and add this data. ````
