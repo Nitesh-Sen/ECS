@@ -9,13 +9,12 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
  - Running registries close to the systems running the containers cuts deployment latency and reduces exposure to network outages.
 
 # Task:- 
-> [Create the Private Amazon ECR Repository](#creating-an-ecr-repository). 
->
-> Build a **Docker Image**  of **Apache container** and configure web page, add this data ``Hello From ECS`` in web page. Then, Pull that **Docker Image** to Amazon ECR.
->     
->  Create a **Cluster** in Amazon Elastic Container Service (ECS). And in the **Task Defination** define that docker image. And run that task with that Docker Image. 
->   
->   Finally, search the DNS in your Browser and check your web page show this -> ``Hello From ECS``
+- [Create the Private Amazon ECR Repository](#creating-an-ecr-repository). 
+- Build a **Docker Image**  of **Apache container** and configure web page, add this data ``Hello From ECS`` in web page. Then, Pull that **Docker Image** to Amazon ECR.
+	- [Create a **Dockerfile**](create-an-dockerfile)
+	- Build the image    
+-   Create a **Cluster** in Amazon Elastic Container Service (ECS). And in the **Task Defination** define that docker image. And run that task with that Docker Image.  
+-   Finally, search the DNS in your Browser and check your web page show this -> ``Hello From ECS``
 
 
 ### Must Have
@@ -43,7 +42,24 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 - Now, private ECR repository is created. <br />
 	  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/main/Images/2023-04-13_14-40.png">
 
- ### Build the image and pushing that image to ECR Repository
+ ### Create And Build the image. Then push that image to ECR Repository
  #### Create an Dockerfile.
- > Run this command to create a directory  and go in that directory. ``$ mkdir ~/Docker && cd ~/Docker``
- > create a file with name **Dockerfile** and add this data. ````
+ - Run this command to create a directory  and go in that directory. ``$ mkdir ~/Docker && cd ~/Docker``
+- Create a file with name **Dockerfile** and add this data. 
+```
+		FROM ubuntu:22.04
+
+		RUN apt update && apt install -y apache2
+
+		ENV APACHE_RUN_USER www-data
+		ENV APACHE_RUN_GROUP www-data
+		ENV APACHE_LOG_DIR /var/log/apache2
+		ENV APACHE_RUN_DIR /var/www/html
+
+		RUN echo "<font size = "20" color="green"><b><u>Hello From ECS ;)</u></b></font><br />" > /var/www/html/index.html
+
+		ENTRYPOINT ["/usr/sbin/apache2"]
+		CMD ["-D", "FOREGROUND"]
+```
+Imagelink
+
