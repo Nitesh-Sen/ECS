@@ -65,7 +65,7 @@ Amazon Elastic Container Registry (ECR) is a managed AWS Docker registry service
 	CMD apache2ctl -D FOREGROUND
 ```
 
-&nbsp; &nbsp; &nbsp;  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/Elastic_Container_Registry-ECS/blob/93bb453df7baeefc053fa4a539c007d2b7f39ccb/Images/Image19-18-39_2023-04-13.png">
+&nbsp; &nbsp; &nbsp;  <img alt="coding" width="700" src="https://github.com/Nitesh-Sen/How-to-use-and-create-Elastic_Container_Registry-ECR/blob/44613951a61c9b082891335d3353d269d8bb2323/Images/Image11-53-01_2023-04-14.png">
 > ***Dockerfile is ready to build now*** 
 <br />
 
